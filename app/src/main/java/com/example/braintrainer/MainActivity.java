@@ -32,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
     public void playAgain(View view) {
         score = 0;
         numberOfQuestions = 0;
-        timerTextView.setText("30s");
+        timerTextView.setText("60s");
         scoreTextView.setText(Integer.toString(score)+"/"+Integer.toString(numberOfQuestions));
         newQuestion();
         playAgainButton.setVisibility(View.INVISIBLE);
         resultTextView.setText("");
 
-        new CountDownTimer(30100,1000) {
+        new CountDownTimer(60100,1000) {
 
             @Override
             public void onTick(long l) {
@@ -123,6 +123,6 @@ public class MainActivity extends AppCompatActivity {
         goButton = findViewById(R.id.goButton);
 
         goButton.setVisibility(View.VISIBLE);
-        
+
     }
 }
